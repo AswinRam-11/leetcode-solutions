@@ -35,16 +35,13 @@ public:
             int a=i;
             int b=mid+1;
             int count=0;
-            vector<int> sorted;
             
             while(a<=mid && b<=j){
                 if(arr[a]<=2*(long)arr[b]){
-                    sorted.push_back(arr[a]);
                     a++;
                 }
                 else{
                     count+=(mid-a+1);
-                    sorted.push_back(arr[b]);
                     b++;
                 }
             }
