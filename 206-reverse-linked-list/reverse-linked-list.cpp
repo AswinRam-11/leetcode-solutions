@@ -14,15 +14,14 @@ public:
         if(!head) return head;
         ListNode* pres=head;
         ListNode* prev=NULL;
-        ListNode* next=head->next;
-        while (next!=NULL){
+        ListNode* next=NULL;
+        while (pres!=NULL){
+            next=pres->next;
             pres->next=prev;
             prev=pres;
             pres=next;
-            next=pres->next;
         }
-        pres->next=prev;
-        head=pres;
+        head=prev;
         return head;
     }
 };
