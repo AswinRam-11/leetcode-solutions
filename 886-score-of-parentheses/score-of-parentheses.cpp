@@ -4,19 +4,17 @@ public:
         if(s[i]==')'){
             return 1;
         }
-        int score=0;
         int pres=0;
         for(; i<s.size(); i++){
             if(s[i]=='('){
                 i++;
-                pres=findScore(i,s);
+                pres+=findScore(i,s);
             }
             else{
                 break;
             }
-            score+=pres;
         }
-        return 2*score;
+        return 2*pres;
     }
     int scoreOfParentheses(string s) {
         int i=0;
