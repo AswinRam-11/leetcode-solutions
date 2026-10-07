@@ -11,9 +11,7 @@
 class Solution {
 public:
     int gcd(int a,int b){
-        int c = max(a,b);
-        b = min(a,b);
-        a=c;
+        
         if(b==0) return a;
         return gcd(b,a%b);
     }
